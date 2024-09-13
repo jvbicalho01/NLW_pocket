@@ -1,4 +1,4 @@
-type Summary = {
+type SummaryResponse = {
   completed: number;
   total: number;
   goalsPerDay: Record<string, {
@@ -8,7 +8,7 @@ type Summary = {
   }[]>;
 }
 
-export async function getSummary(): Promise<Summary> {
+export async function getSummary(): Promise<SummaryResponse> {
   const response = await fetch("http://localhost:3333/summary");
   const data = await response.json();
 
