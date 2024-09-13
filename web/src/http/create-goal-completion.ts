@@ -5,7 +5,7 @@ export async function createGoalCompletion(goalId: string) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      goalId: goalId,
+      goalId,
     }),
   });
 }
